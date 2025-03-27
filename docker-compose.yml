@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  php:
+    image: php:8.2-apache
+    container_name: login-php-container
+    ports:
+      - "8080:80"
+    volumes:
+      - ./php:/var/www/html # Mount your local PHP code to the container
+    
